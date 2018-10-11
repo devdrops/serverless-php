@@ -1,0 +1,14 @@
+service: ow-php-hello
+
+provider:
+  name: openwhisk
+  runtime: php
+
+functions:
+  hello:
+    handler: handler.hello
+    annotations:
+      web-export: true
+
+plugins:
+  - serverless-openwhisk

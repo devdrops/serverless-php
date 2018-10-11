@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  env:
+    image: devdrops/sls-ow-bx:latest
+    volumes:
+      - .:/code
+    working_dir: /code
+    env_file: .env
+  php:
+    image: devdrops/php-toolbox
+    volumes:
+      - .:/code
+    working_dir: /code
+

@@ -1,0 +1,16 @@
+{
+  "name": "PHPesteBot",
+  "description": "Um bot para Telegram, feito com Serverless e PHP",
+  "keywords": [
+    "serverless",
+    "php",
+    "ibm cloud"
+  ],
+  "license": "GPL-3.0-only",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Bot\\": "src/"
+    }
+  }
+}

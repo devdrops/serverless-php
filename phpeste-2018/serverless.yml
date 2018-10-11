@@ -1,0 +1,14 @@
+service: phpeste-2018
+
+provider:
+  name: openwhisk
+  runtime: php
+
+functions:
+  hello:
+    handler: handler.entrypoint
+    annotations:
+      web-export: true
+
+plugins:
+  - serverless-openwhisk
