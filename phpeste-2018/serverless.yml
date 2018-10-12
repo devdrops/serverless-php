@@ -4,11 +4,31 @@ provider:
   name: openwhisk
   runtime: php
 
+package:
+  individually: true
+  exclude:
+    - "*"
+  include:
+    - "vendor/**"
+
 functions:
-  hello:
-    handler: handler.entrypoint
+
+  entrypoint:
+    handler: index.entrypoint
     annotations:
       web-export: true
+    package:
+      include:
+        - index.php
+
+  health-check:
+    handler: health-check.status
+    annotations:
+      web-export: true
+    package:
+      include:
+        - health-check.php
 
 plugins:
   - serverless-openwhisk
+

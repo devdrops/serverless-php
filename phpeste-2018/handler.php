@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
+require __DIR__.'/vendor/autoload.php';
+
 function entrypoint(array $args) : array
 {
-    $name = $args['name'] ?? 'stranger';
-    $greeting = "Hello $name!";
-
     return [
         'body' => [
-            'foo' => 'bar'
-        ]
+            'its_working' => true,
+        ],
     ];
 }
