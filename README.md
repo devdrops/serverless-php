@@ -66,9 +66,26 @@ cd ow-php-hello
 sudo chmod 666 serverless.yml handler.php
 ```
 
+Essa permissão é importante para que você edite na sua máquina os arquivos criados dentro do ambiente Docker. Agora, você pode editar seus arquivos da forma como você quiser.
+
+### Deploy da função
+
+1. Antes de seguir, é preciso instalar as dependências do framework Serverless. Dentro do ambiente Docker, execute o comando:
+
+```sh
+cd ow-php-hello
+npm install
+```
+
+2. Depois, para configurar as credenciais do IBM Cloud, no seu ambiente Docker, execute o comando:
+
+```sh
+bx wsk api list
+```
+
 3. Para fazer o deploy, no ambiente de Docker, execute o comando:
 
-```
+```sh
 cd ow-php-hello
 sls deploy
 ```
